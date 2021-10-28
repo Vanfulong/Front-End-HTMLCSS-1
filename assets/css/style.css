@@ -57,12 +57,13 @@ html{
 
     position: relative;
 }
+
 #nav li a{
     color: white;
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
 #nav >li:hover> a{
     color: black;
@@ -90,18 +91,32 @@ html{
 #nav .nav-crow-down{
     font-size: 14px;
 }
+.mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.mobile-menu-btn,
 #header .searchbutton{
     float: right;
     padding: 0 21px;
     cursor: pointer;
 }
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
 #header .searchbutton:hover{
     background-color: #f44336;
 }
+#header .mobile-icon,
 #header .search-icon{
     font-size: 20px;
     color: white;
     line-height: 46px;
+}
+#header .mobile-menu-btn:hover .mobile-icon{
+    color: black;
 }
 #slider{
     margin-top: 46px;
@@ -128,9 +143,12 @@ html{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto ;
     padding: 64px 0;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 #content .section-heading{
     font-size: 30px;
@@ -168,7 +186,7 @@ html{
     
 }
 #content .member-img{
-    width: 154px;
+    width: 60%;
     margin-top: 15px;
     border-radius: 4px;
 }
@@ -252,6 +270,7 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
+    cursor: pointer;
 }
 .place-buy-btn:hover{
     background-color: #ccc;
@@ -370,6 +389,32 @@ button#buy-tickets {
 .form-submit:hover{
     background: #ccc;
     color: #000;
+    cursor: pointer;
+}
+.map-section img{
+    width: 100%;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+
+}
+#footer .social-list a{
+    text-decoration: none;
+    color: rgb(0, 0, 0,0.6);
+}
+#footer .social-list a:hover{
+    color: rgb(0, 0, 0,0.3);
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgb(0, 0, 0,0.6);
+}
+#footer .copyright a{
+    color: rgb(0, 0, 0,0.6);
 }
 @keyframes modalFadeIn{
     from{
